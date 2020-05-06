@@ -1,8 +1,11 @@
 ---
-layout: post
 title:  "Test"
-date:   2020-01-30 15:35:05 +0000
 categories: FPGA
+last_modified_at: 2018-03-20T16:00:58-04:00
+tags:
+  - update
+toc: true
+toc_label: "Getting Started"
 ---
 
 # Test
