@@ -1,28 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-15T16:40:39+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jay’s Blog</title><subtitle>A FPGA developer's technical blog </subtitle><author><name>Jay Yan</name><email>jifeiyan@gmail.com</email></author><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-01-30T13:11:05+00:00</published><updated>2020-01-30T13:11:05+00:00</updated><id>http://localhost:4000/jekyll/update/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Jay Yan</name><email>jifeiyan@gmail.com</email></author><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Test</title><link href="http://localhost:4000/fpga/test/" rel="alternate" type="text/html" title="Test" /><published>2020-01-30T00:00:00+00:00</published><updated>2018-03-20T20:00:58+00:00</updated><id>http://localhost:4000/fpga/test</id><content type="html" xml:base="http://localhost:4000/fpga/test/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-02T16:24:34+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jay’s Blog</title><subtitle>A FPGA developer's technical blog </subtitle><author><name>Jay Yan</name><email>jifeiyan@gmail.com</email></author><entry><title type="html">PID Controller in FPGA For DC Motors (Part 1)</title><link href="http://localhost:4000/fpga/pid-control-dc-motor-p1/" rel="alternate" type="text/html" title="PID Controller in FPGA For DC Motors (Part 1)" /><published>2020-05-28T00:00:00+01:00</published><updated>2020-05-28T00:00:00+01:00</updated><id>http://localhost:4000/fpga/pid-control-dc-motor-p1</id><content type="html" xml:base="http://localhost:4000/fpga/pid-control-dc-motor-p1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
 &lt;/script&gt;
 
-&lt;h1 id=&quot;test&quot;&gt;Test&lt;/h1&gt;
+&lt;p&gt;I recently work on a project which requires a customized controller in FPGA to control a DC motor. Since PID controller is a good start point for this type of control function, I decided to refresh my control theory knowledge before I start implementing any design.&lt;/p&gt;
 
-&lt;p&gt;you can use an inline formula \(\forall x \in R\) like this one&lt;/p&gt;
+&lt;p&gt;I found a &lt;a href=&quot;http://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&amp;amp;section=ControlPID&quot;&gt;webpage&lt;/a&gt; that explains PID control in detail. It shows how the DC motor step response changes when the parameters of PID controller change.&lt;/p&gt;
 
-\[M = \left( \begin{array}{ccc}
-x_{11} &amp;amp; x_{12} &amp;amp; \ldots \\
-x_{21} &amp;amp; x_{22} &amp;amp; \ldots \\
-\vdots &amp;amp; \vdots &amp;amp; \ldots \\
-\end{array} \right)\]</content><author><name>Jay Yan</name><email>jifeiyan@gmail.com</email></author><category term="update" /><summary type="html"></summary></entry></feed>
+&lt;h2 id=&quot;open-loop-response-without-controller&quot;&gt;Open Loop Response (without Controller)&lt;/h2&gt;
+
+&lt;p&gt;The webpage pointed out the step response of the DC motor without any control loop as below. It shows that, if applying 1V voltage to the motor, it will reach 0.1 rad/s in 2 seconds. So what if we want to reach 1 rad/s?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/System/Analysis/figures/MotorSpeed_SystemAnalysis_step.png&quot; alt=&quot;open loop response&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;closed-loop-response-with-controller&quot;&gt;Closed Loop Response (with Controller)&lt;/h2&gt;
+
+&lt;p&gt;The webpage gave an answer to use proportional control which is a PID controller with “P” parameter only. The step response of the DC motor changes to the picture below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_01.png&quot; alt=&quot;P control response&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we are still not happy with the step response, we can introduce “I” and “D” parameter to the controller to get the nearly perfect step response.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_04.png&quot; alt=&quot;PID control response&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now I have a question in my mind. Since I am going to design a controller, I would like to know what is the input and output of the PID controller look like in this case. Unfortunately, this webpage does not give any details about this.&lt;/p&gt;
+
+&lt;h2 id=&quot;input-and-output-of-the-pid-controller&quot;&gt;Input and Output of the PID Controller&lt;/h2&gt;
+
+&lt;p&gt;So I decided to build the same PID control loop in &lt;a href=&quot;https://www.gnu.org/software/octave/&quot;&gt;Octave&lt;/a&gt; to monitor the input and output of the PID controller as shown in the diagram. The source code used can be found &lt;a href=&quot;/assets/src/2020-05-28/dc_motor_model.m&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-05-28/pid_loop.svg&quot; alt=&quot;PID in loop&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For proportion control loop, the input of the PID controller is the difference(&lt;em&gt;err&lt;/em&gt;) between expected motor speed and actual motor speed. The output of the PID controller is the &lt;em&gt;voltage&lt;/em&gt; applied to the motor. From the diagram below, we can see that the voltage started from about 100V which is quite high for motors I normally work with. Then gradually decreased to about -10V. At the end, it stabilized at about 10V. However, the motor did not reach its target speed 1 rad/s (Steady-state error). It is not a perfect design but still implementable.&lt;/p&gt;
+
+&lt;p&gt;“P” controller step response:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-05-28/p_ctrl.svg&quot; alt=&quot;P control&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we have a look the control loop with a full “PID” controller. After some effort to make it work (details can be found at the end of the post), I got the step response as below. The output of the PID controller reached staggering 10KV! It is way out of normal embedded system voltage range. Although the motor runs very smoothly under this controller. It is very difficult if not impossible to implement this “PID” controller, Never mind to find the DC motor that can take 10KV input.&lt;/p&gt;
+
+&lt;p&gt;“PID” controller step response with shocking 10KV output:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-05-28/pid_ctrl.svg&quot; alt=&quot;PID control&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the simulation result, it is clear that, despite of the perfect motor speed control, a &lt;em&gt;FULL&lt;/em&gt; PID controller is not always implementable. If we take out the “D”(Differentiator) part of the PID controller, we have a “PI” controller which has step response as below. Here, I limit the “P” parameter to 20. So the voltage output of the controller does not go over 24V which is widely acceptable for DC motors. Comparing to &lt;em&gt;FULL&lt;/em&gt; “PID” controller, it takes longer for the motor to reach its target speed.&lt;/p&gt;
+
+&lt;p&gt;“PI” controller step response:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-05-28/pi_ctrl.svg&quot; alt=&quot;PI control&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next step for me is to implement a “PI” controller in FPGA.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-not-pure-differentiator&quot;&gt;Why Not Pure Differentiator&lt;/h2&gt;
+
+&lt;p&gt;During the process of simulating the &lt;em&gt;FULL&lt;/em&gt; PID controller, the differentiator has been causing problem for the simulator. Basically, a pure differentiator is not implementable in real world. A &lt;a href=&quot;http://blog.jafma.net/2015/10/04/differentiation-derivative-is-causal-but-not-exactly-realizable/&quot;&gt;blog&lt;/a&gt; gives good explanation. A general rule is to add some components in the PID controller to make its transfer function &lt;a href=&quot;https://en.wikipedia.org/wiki/Proper_transfer_function#:~:text=In%20control%20theory%2C%20a%20proper,the%20degree%20of%20the%20denominator.&quot;&gt;proper&lt;/a&gt;. In practice, a low-pass filter will do the job. In my case, I added a LPF with transfer function as below just to keep the simulator happy.&lt;/p&gt;
+
+\[\frac{1000}{S+1000}\]</content><author><name>Jay Yan</name><email>jifeiyan@gmail.com</email></author><category term="DC Motor" /><category term="PID" /><summary type="html"></summary></entry></feed>

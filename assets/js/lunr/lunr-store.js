@@ -1,13 +1,7 @@
 var store = [{
-        "title": "Test",
-        "excerpt":"  Test   you can use an inline formula \\(\\forall x \\in R\\) like this one   \\[M = \\left( \\begin{array}{ccc} x_{11} &amp; x_{12} &amp; \\ldots \\\\ x_{21} &amp; x_{22} &amp; \\ldots \\\\ \\vdots &amp; \\vdots &amp; \\ldots \\\\ \\end{array} \\right)\\]  ","categories": ["FPGA"],
-        "tags": ["update"],
-        "url": "http://localhost:4000/fpga/test/",
-        "teaser": "http://localhost:4000/assets/images/500x300.jpg"
-      },{
-        "title": "Welcome to Jekyll!",
-        "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["jekyll","update"],
-        "tags": ["update"],
-        "url": "http://localhost:4000/jekyll/update/welcome-to-jekyll/",
+        "title": "PID Controller in FPGA For DC Motors (Part 1)",
+        "excerpt":"I recently work on a project which requires a customized controller in FPGA to control a DC motor. Since PID controller is a good start point for this type of control function, I decided to refresh my control theory knowledge before I start implementing any design. I found a webpage...","categories": ["FPGA"],
+        "tags": ["DC Motor","PID"],
+        "url": "http://localhost:4000/fpga/pid-control-dc-motor-p1/",
         "teaser": "http://localhost:4000/assets/images/500x300.jpg"
       }]

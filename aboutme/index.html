@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Jay's Blog</title>
+<!-- begin _includes/seo.html --><title>About Me - Jay’s Blog</title>
 <meta name="description" content="A FPGA developer’s technical blog ">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Jay's Blog">
-<meta property="og:title" content="Jay’s Blog">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="About Me">
+<meta property="og:url" content="http://localhost:4000/aboutme/">
 
 
   <meta property="og:description" content="A FPGA developer’s technical blog ">
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/aboutme/">
 
 
 
@@ -101,7 +101,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -273,53 +273,104 @@
 
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="About Me">
     
-      <h1 id="page-title" class="page__title"></h1>
     
     
 
-<h3 class="archive__subtitle">Recent Posts</h3>
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">About Me
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>I am a FPGA design engineer with experience in real time data processing and embedded system design. I am familiar with traditional RTL level FPGA design using SystemVerilog/VHDL and C/C++ based high level synthesis flow.</p>
+
+<h2 id="work-experience">Work Experience</h2>
+
+<p><strong>August 2018 to Present  Senior Electronic(FPGA) Engineer</strong><br />
+<strong>NCR Financial Solution Group, Dundee, UK</strong></p>
+
+<p>I am responsible for FPGA-based sensor fusion solution for cash/check deposit devices.</p>
+
+<p>Contributions:</p>
+
+<ol>
+  <li>Proprietary image sensor controllers in FPGA.</li>
+  <li>Proprietary DRAM controller for image processing in FPGA.</li>
+  <li>Applying formal verification flow to designs. The tool used is symbiyosys.</li>
+  <li>System Verilog /UVM based simulation environment.</li>
+  <li>Exploring edge computing architecture for next generation products.</li>
+</ol>
+
+<p><strong>September 2014 to August 2018 Lead Electronic Hardware Engineer</strong><br />
+<strong>General Electric (GE Power), Stafford, UK</strong></p>
+
+<p>I was responsible for FPGA-based hardware acceleration for grids protection applications. The FPGA device used was Xilinx Zynq UltraScale+.</p>
+
+<p>Contributions:</p>
+
+<ol>
+  <li>Analyse system level requirements, explore the feasibility and performance of using FPGA and provide FPGA-based design specifications.</li>
+  <li>Implement IO interface to connect FPGA to real world, including standard IO protocols such as Ethernet, EtherCAT, AXI, etc. also customized protocols which use SERDES and transceivers.</li>
+  <li>Implement solutions in MATLAB or C as golden references.</li>
+  <li>Implement signal processing algorithms in FPGA, including IIR/FIR filter, interpolation, DFT. Some of the algorithms were developed in Vivado HLS (C based high level synthesis flow). Others were written in VHDL.</li>
+  <li>Build FPGA simulation environment by using SystemVerilog and UVM.
+1.Integrate FPGA with software, including writing test applications to access FPGA private memory space or shared DDR memory and validate implemented functions in bare-metal and Linux environment.</li>
+  <li>FPGA source code management by using GIT and also FPGA project automation by using TCL script.</li>
+</ol>
+
+<p><strong>December 2004 to July 2013  Electronic Engineer</strong><br />
+<strong>Huawei Technologies, Shenzhen, China</strong></p>
+
+<p>I was responsible for designing embedded hardware platforms with FPGA and embedded processors. These platforms were used for digital TV live broadcasting. The FPGA devices that we used were Xilinx Vertex 4/5 and Altera Cyclone II/III.</p>
+
+<p>Contributions:</p>
+
+<ol>
+  <li>Modelling and implementing program clock reference tracking method when MEPG-2 TS packets are streamed over IP network. Basically, a feasible way for FPGA to track hundreds of TV programs time reference.</li>
+  <li>Implementing video processing algorithms in FPGA. Original algorithms were written in C and had to be manually redesigned and translated into Verilog.</li>
+  <li>Supporting customers to solve issues and providing system solutions. For example, the IPTV head-end project including 600 SD channels and 100 HD channels for Etisalat UAE.</li>
+  <li>Designing hardware schematic and debugging.</li>
+</ol>
+
+<h2 id="education">Education</h2>
+
+<p>September 2013 to September 2014  MSc with Distinction, System-On-Chip<br />
+University of Southampton, UK</p>
+
+<p>September 2000 to July 2004  BEng, Electronic Engineering<br />
+Hefei University of Technology, China</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
 
 
+        
+      </footer>
 
+      
+
+      
+    </div>
+
+    
+  </article>
 
   
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/fpga/pid-control-dc-motor-p1/" rel="permalink">PID Controller in FPGA For DC Motors (Part 1)
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
+  
 </div>
 
-
-
-
-
-
-  </div>
-</div>
     </div>
 
     
