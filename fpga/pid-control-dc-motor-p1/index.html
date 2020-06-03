@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>PID Controller in FPGA For DC Motors (Part 1) - Jay’s Blog</title>
+<!-- begin _includes/seo.html --><title>Simulate A PID Controller For DC Motor - Jay’s Blog</title>
 <meta name="description" content="  ">
 
 
@@ -19,7 +19,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Jay's Blog">
-<meta property="og:title" content="PID Controller in FPGA For DC Motors (Part 1)">
+<meta property="og:title" content="Simulate A PID Controller For DC Motor">
 <meta property="og:url" content="https://yanjifei.github.io/fpga/pid-control-dc-motor-p1/">
 
 
@@ -276,7 +276,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="PID Controller in FPGA For DC Motors (Part 1)">
+    <meta itemprop="headline" content="Simulate A PID Controller For DC Motor">
     <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2020-05-28T00:00:00+01:00">
     
@@ -284,7 +284,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">PID Controller in FPGA For DC Motors (Part 1)
+          <h1 id="page-title" class="page__title" itemprop="headline">Simulate A PID Controller For DC Motor
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -323,21 +323,15 @@
 
 <h2 id="open-loop-response-without-controller">Open Loop Response (without Controller)</h2>
 
-<p>The webpage pointed out the step response of the DC motor without any control loop as below. It shows that, if applying 1V voltage to the motor, it will reach 0.1 rad/s in 2 seconds. So what if we want to reach 1 rad/s?</p>
-
-<p><img src="http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/System/Analysis/figures/MotorSpeed_SystemAnalysis_step.png" alt="open loop response" /></p>
+<p>The webpage pointed out the step response of the DC motor without any control loop as in <a href="http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/System/Analysis/figures/MotorSpeed_SystemAnalysis_step.png">link</a>. It shows that, if applying 1V voltage to the motor, it will reach 0.1 rad/s in 2 seconds. So what if we want to reach 1 rad/s?</p>
 
 <h2 id="closed-loop-response-with-controller">Closed Loop Response (with Controller)</h2>
 
-<p>The webpage gave an answer to use proportional control which is a PID controller with “P” parameter only. The step response of the DC motor changes to the picture below.</p>
+<p>The webpage gave an answer to use proportional control which is a PID controller with “P” parameter only. The step response of the DC motor changes to <a href="http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_01.png">this</a>.</p>
 
-<p><img src="http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_01.png" alt="P control response" /></p>
+<p>Furthermore, “I” and “D” parameters are introduced to the controller to get the nearly perfect step response <a href="http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_04.png">here</a>.</p>
 
-<p>If we are still not happy with the step response, we can introduce “I” and “D” parameter to the controller to get the nearly perfect step response.</p>
-
-<p><img src="http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_04.png" alt="PID control response" /></p>
-
-<p>Now I have a question in my mind. Since I am going to design a controller, I would like to know what is the input and output of the PID controller look like in this case. Unfortunately, this webpage does not give any details about this.</p>
+<p>Now I have a question in my mind. Since I am going to design a controller, I would like to know what is the input and output of the PID controller look like in this case. Unfortunately, this webpage does not give any details.</p>
 
 <h2 id="input-and-output-of-the-pid-controller">Input and Output of the PID Controller</h2>
 
@@ -370,6 +364,8 @@
 <p>During the process of simulating the <em>FULL</em> PID controller, the differentiator has been causing problem for the simulator. Basically, a pure differentiator is not implementable in real world. A <a href="http://blog.jafma.net/2015/10/04/differentiation-derivative-is-causal-but-not-exactly-realizable/">blog</a> gives good explanation. A general rule is to add some components in the PID controller to make its transfer function <a href="https://en.wikipedia.org/wiki/Proper_transfer_function#:~:text=In%20control%20theory%2C%20a%20proper,the%20degree%20of%20the%20denominator.">proper</a>. In practice, a low-pass filter will do the job. In my case, I added a LPF with transfer function as below just to keep the simulator happy.</p>
 
 \[\frac{1000}{S+1000}\]
+
+\[\frac{10^3}{S+10^3}\]
 
 
         
@@ -430,7 +426,7 @@
       <section class="page__share">
   
 
-  <a href="https://twitter.com/intent/tweet?text=PID+Controller+in+FPGA+For+DC+Motors+%28Part+1%29%20https%3A%2F%2Fyanjifei.github.io%2Ffpga%2Fpid-control-dc-motor-p1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Simulate+A+PID+Controller+For+DC+Motor%20https%3A%2F%2Fyanjifei.github.io%2Ffpga%2Fpid-control-dc-motor-p1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyanjifei.github.io%2Ffpga%2Fpid-control-dc-motor-p1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 

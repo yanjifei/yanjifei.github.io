@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://yanjifei.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yanjifei.github.io/" rel="alternate" type="text/html" /><updated>2020-06-03T08:42:19+01:00</updated><id>https://yanjifei.github.io/feed.xml</id><title type="html">Jay’s Blog</title><subtitle>A FPGA developer's technical blog </subtitle><author><name>Jay Yan</name><email>jifeiyan@gmail.com</email></author><entry><title type="html">PID Controller in FPGA For DC Motors (Part 1)</title><link href="https://yanjifei.github.io/fpga/pid-control-dc-motor-p1/" rel="alternate" type="text/html" title="PID Controller in FPGA For DC Motors (Part 1)" /><published>2020-05-28T00:00:00+01:00</published><updated>2020-05-28T00:00:00+01:00</updated><id>https://yanjifei.github.io/fpga/pid-control-dc-motor-p1</id><content type="html" xml:base="https://yanjifei.github.io/fpga/pid-control-dc-motor-p1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://yanjifei.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yanjifei.github.io/" rel="alternate" type="text/html" /><updated>2020-06-03T16:17:43+01:00</updated><id>https://yanjifei.github.io/feed.xml</id><title type="html">Jay’s Blog</title><subtitle>A FPGA developer's technical blog </subtitle><author><name>Jay Yan</name><email>jifeiyan@gmail.com</email></author><entry><title type="html">Simulate A PID Controller For DC Motor</title><link href="https://yanjifei.github.io/fpga/pid-control-dc-motor-p1/" rel="alternate" type="text/html" title="Simulate A PID Controller For DC Motor" /><published>2020-05-28T00:00:00+01:00</published><updated>2020-05-28T00:00:00+01:00</updated><id>https://yanjifei.github.io/fpga/pid-control-dc-motor-p1</id><content type="html" xml:base="https://yanjifei.github.io/fpga/pid-control-dc-motor-p1/">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
 &lt;/script&gt;
 
 &lt;p&gt;I recently work on a project which requires a customized controller in FPGA to control a DC motor. Since PID controller is a good start point for this type of control function, I decided to refresh my control theory knowledge before I start implementing any design.&lt;/p&gt;
@@ -7,21 +7,15 @@
 
 &lt;h2 id=&quot;open-loop-response-without-controller&quot;&gt;Open Loop Response (without Controller)&lt;/h2&gt;
 
-&lt;p&gt;The webpage pointed out the step response of the DC motor without any control loop as below. It shows that, if applying 1V voltage to the motor, it will reach 0.1 rad/s in 2 seconds. So what if we want to reach 1 rad/s?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/System/Analysis/figures/MotorSpeed_SystemAnalysis_step.png&quot; alt=&quot;open loop response&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The webpage pointed out the step response of the DC motor without any control loop as in &lt;a href=&quot;http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/System/Analysis/figures/MotorSpeed_SystemAnalysis_step.png&quot;&gt;link&lt;/a&gt;. It shows that, if applying 1V voltage to the motor, it will reach 0.1 rad/s in 2 seconds. So what if we want to reach 1 rad/s?&lt;/p&gt;
 
 &lt;h2 id=&quot;closed-loop-response-with-controller&quot;&gt;Closed Loop Response (with Controller)&lt;/h2&gt;
 
-&lt;p&gt;The webpage gave an answer to use proportional control which is a PID controller with “P” parameter only. The step response of the DC motor changes to the picture below.&lt;/p&gt;
+&lt;p&gt;The webpage gave an answer to use proportional control which is a PID controller with “P” parameter only. The step response of the DC motor changes to &lt;a href=&quot;http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_01.png&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_01.png&quot; alt=&quot;P control response&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Furthermore, “I” and “D” parameters are introduced to the controller to get the nearly perfect step response &lt;a href=&quot;http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_04.png&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;If we are still not happy with the step response, we can introduce “I” and “D” parameter to the controller to get the nearly perfect step response.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Control/PID/figures/sPID_control_04.png&quot; alt=&quot;PID control response&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now I have a question in my mind. Since I am going to design a controller, I would like to know what is the input and output of the PID controller look like in this case. Unfortunately, this webpage does not give any details about this.&lt;/p&gt;
+&lt;p&gt;Now I have a question in my mind. Since I am going to design a controller, I would like to know what is the input and output of the PID controller look like in this case. Unfortunately, this webpage does not give any details.&lt;/p&gt;
 
 &lt;h2 id=&quot;input-and-output-of-the-pid-controller&quot;&gt;Input and Output of the PID Controller&lt;/h2&gt;
 
@@ -53,4 +47,6 @@
 
 &lt;p&gt;During the process of simulating the &lt;em&gt;FULL&lt;/em&gt; PID controller, the differentiator has been causing problem for the simulator. Basically, a pure differentiator is not implementable in real world. A &lt;a href=&quot;http://blog.jafma.net/2015/10/04/differentiation-derivative-is-causal-but-not-exactly-realizable/&quot;&gt;blog&lt;/a&gt; gives good explanation. A general rule is to add some components in the PID controller to make its transfer function &lt;a href=&quot;https://en.wikipedia.org/wiki/Proper_transfer_function#:~:text=In%20control%20theory%2C%20a%20proper,the%20degree%20of%20the%20denominator.&quot;&gt;proper&lt;/a&gt;. In practice, a low-pass filter will do the job. In my case, I added a LPF with transfer function as below just to keep the simulator happy.&lt;/p&gt;
 
-\[\frac{1000}{S+1000}\]</content><author><name>Jay Yan</name><email>jifeiyan@gmail.com</email></author><category term="DC Motor" /><category term="PID" /><summary type="html"></summary></entry></feed>
+\[\frac{1000}{S+1000}\]
+
+\[\frac{10^3}{S+10^3}\]</content><author><name>Jay Yan</name><email>jifeiyan@gmail.com</email></author><category term="DC Motor" /><category term="PID" /><summary type="html"></summary></entry></feed>
